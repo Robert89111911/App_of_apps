@@ -32,5 +32,11 @@ pipeline {
                 }
             }
         }
+
+        stage('Cleaning containers') {
+            steps {
+                sh "docker rm -f frontend backend"
+            }
+        }
     }
 }
